@@ -36,7 +36,6 @@ h2{font-size:1.35rem;font-weight:800;margin:0 0 .6rem}
 dl{margin:0;display:grid;grid-template-columns:minmax(7rem,9rem) 1fr;gap:.35rem 1rem}
 dt{color:var(--muted);font-weight:600}
 dd{margin:0}
-.stats{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;font-variant-numeric:tabular-nums}
 @media (max-width:30rem){dl{grid-template-columns:1fr;gap:0}dd{margin-bottom:.5rem}}
 .note{color:var(--muted);font-size:.9rem;margin-top:3rem}
 </style>
@@ -45,7 +44,7 @@ dd{margin:0}
 <main>
   <nav><a href="index.html">Codes</a><a href="dragon.html">Ultimate Divine Dragon</a><a href="bandaid.html" aria-current="page">Under the Bandaid</a></nav>
   <h1>Under the Bandaid</h1>
-  <p class="lede">Each boss in order, with its requirements, stats, and rewards.</p>
+  <p class="lede">Each boss in order, with its requirements, rewards, and rush check.</p>
   <div id="list"></div>
   <p class="note">Unofficial, fan-made list.</p>
 </main>
@@ -72,10 +71,6 @@ load().then((rows) => {
     const add = (label, value) => { dl.append(el("dt", label), value instanceof Node ? value : el("dd", value)); };
     add("Requirements", r.requirements);
     add("Rewards", r.rewards);
-    add("Special stats", r.special);
-    const stats = el("dd", null, "stats");
-    for (const [k, v] of [["ATK", r.atk], ["DEF", r.def], ["HP", r.hp]]) stats.appendChild(el("span", k + " " + fmt(v)));
-    add("Stats", stats);
     add("Rush check", fmt(r.check));
     a.appendChild(dl); list.appendChild(a);
   }
