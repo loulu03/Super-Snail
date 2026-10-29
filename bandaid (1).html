@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Under the Bandaid</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#eef2e6;--ink:#1a2a20;--muted:#55645a;--line:#c9d4bf;--card:#e3eada;--accent:#2d6a4f;--on-accent:#ffffff;--flash:#c9e46b;--flash-ink:#1a2a20;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101913;--ink:#e4eee1;--muted:#97a89b;--line:#2a3a2f;--card:#18241c;--accent:#7fcf9f;--on-accent:#0e1a12;--flash:#c9e46b;--flash-ink:#16210f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#101913;--ink:#e4eee1;--muted:#97a89b;--line:#2a3a2f;--card:#18241c;--accent:#7fcf9f;--on-accent:#0e1a12;--flash:#c9e46b;--flash-ink:#16210f;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
+main{max-width:48rem;margin:0 auto;padding:2rem 1.25rem 4rem}
+nav{display:flex;gap:1.25rem;flex-wrap:wrap;margin-bottom:2rem;font-weight:600}
+nav a{color:var(--ink);text-decoration:none;padding-bottom:.15rem;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--line)}
+nav a[aria-current]{border-color:var(--accent)}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+h1{font-size:clamp(2rem,7vw,3.25rem);line-height:1.05;letter-spacing:-.03em;font-weight:800;margin:0 0 .75rem}
+h2{font-size:1.3rem;font-weight:600;margin:0 0 .6rem;letter-spacing:-.01em}
+.lede{color:var(--muted);margin:0 0 2rem;max-width:34rem}
+.tool{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem}
+label{display:flex;flex-direction:column;gap:.3rem;font-weight:600;font-size:.95rem}
+input{font:inherit;width:10rem;padding:.55rem .7rem;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:6px}
+input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.next-line{font-size:1.15rem;font-weight:600;margin:0 0 1.75rem}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1.75rem;margin-bottom:2.5rem}
+.sum ul{list-style:none;margin:0;padding:0}
+.sum li{display:flex;justify-content:space-between;gap:1rem;padding:.4rem 0;border-bottom:1px solid var(--line)}
+.sum li span:last-child{font-variant-numeric:tabular-nums;font-weight:600}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+th,td{text-align:left;padding:.5rem .55rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{border-bottom:2px solid var(--ink);font-weight:600}
+td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+.name{font-weight:800}
+.req{color:var(--muted);font-size:.88rem}
+@media (max-width:30rem){table{font-size:.85rem}th,td{padding:.45rem .3rem}}
+.note{color:var(--muted);font-size:.9rem;margin-top:3rem}
+</style>
+</head>
+<body>
+<main>
+  <nav><a href="index.html">Codes</a><a href="dragon.html">Ultimate Divine Dragon</a><a href="bandaid.html" aria-current="page">Under the Bandaid</a></nav>
+  <h1>Under the Bandaid</h1>
+  <p class="lede">Each boss in order, with its requirements, rewards, and rush check.</p>
+  <table><thead><tr><th>Boss</th><th>Rush check</th><th>Rewards</th></tr></thead><tbody id="rows"></tbody></table>
+  <p class="note">Unofficial, fan-made list.</p>
+</main>
+<script>
+// Fallback data; mirrors bandaid.json. When bandaid.json sits next to this page it is loaded instead.
+const SEED = [{"no":1,"boss":"Demon Dragon","requirements":"Summon the Divine Dragon 50 times and submit 20 Dragon Orbs","check":119350,"special":"HIT +80, Paralysis RES +80%","atk":136764,"def":98210,"hp":2183948,"rewards":"Gear: Broken Demon Dragon Horn"},{"no":2,"boss":"Magic Mboard","requirements":"300 Controllers","check":129030,"special":"HIT +80, Paralysis RES +80%","atk":154924,"def":111251,"hp":2633241,"rewards":"Special Robot: Demonized Mboard"},{"no":3,"boss":"Heart of Gaia","requirements":"Beat the Manhunt: Earth Will Cancer LVL 2 and 3k Organ Slimes","check":139250,"special":"CRIT 100%, CRIT DMG 40%, HIT +80, Paralysis RES +80%, HP Regen +100k","atk":162743,"def":125580,"hp":2085104,"rewards":"Heart of Gaia"},{"no":4,"boss":"Peter","requirements":"100 B-tads","check":150150,"special":"Evasion rate +40%, HIT +80, Paralysis RES +80%","atk":191024,"def":141680,"hp":3411694,"rewards":"Green Relic: Gold Medal Producer"},{"no":5,"boss":"Demonized Excalibur","requirements":"30M Power and 30 Heaven Wings","check":162000,"special":"CRIT 100%, CRIT DMG 40%, HIT +80, Paralysis RES +80%","atk":200000,"def":160000,"hp":4700000,"rewards":"Gear: Fractured Caladbolg"},{"no":6,"boss":"Ba’al","requirements":"5k Fissure level and 30 Abyss Wings","check":174900,"special":"CRIT 100%, CRIT DMG 30%, HIT +80, Paralysis RES +80%, Lifesteal +100%","atk":215137,"def":176295,"hp":5290933,"rewards":"Gear: Fire of Fury"},{"no":7,"boss":"Agares","requirements":"40 Dragon Orbs","check":191920,"special":"CRIT 100%, CRIT DMG +30%, HIT +80, Paralysis RES +80%, Lifesteal +100%, Lifesteal Effect +1500%","atk":237270,"def":224848,"hp":7603979,"rewards":"1k Magic Potions"},{"no":8,"boss":"Baimon","requirements":"600 Controllers","check":210785,"special":"CRIT 100%, CRIT DMG +30%, HIT +80, Paralysis RES +80%, Lifesteal +100%, Lifesteal Effect +2000%","atk":268094,"def":224848,"hp":9926361,"rewards":"Blasphemy Eye"},{"no":9,"boss":"Asmodeus","requirements":"6k Organ Slimes","check":229630,"special":"CRIT 100%, CRIT DMG +30%, HIT +80, Paralysis RES +80%, Lifesteal +100%, Lifesteal Effect +2500%","atk":294178,"def":251942,"hp":14312564,"rewards":"6k Organ Slimes, Demon Crystal"},{"no":10,"boss":"Astaru","requirements":"60 Heaven Wings","check":2482480,"special":"CRIT 100%, CRIT DMG +30%, Paralysis RES +80, Lifesteal +100%, HIT +80, Lifesteal Effect +3000%","atk":323220,"def":282118,"hp":20832438,"rewards":"3k Glues, Green Relic: Demon King"},{"no":11,"boss":"Ultimate Weapon","requirements":"150 Object Shoots, 60 Abyss Wings","check":262600,"special":"CRIT 100%, CRIT DMG +20%, HIT +80, Paralysis RES +80%, HP Regen +300,000","atk":377516,"def":332580,"hp":33209043,"rewards":"3k Glues, Mecha minions orange skin frags"},{"no":12,"boss":"Light Giant","requirements":"60 Dragon Orbs","check":275145,"special":"CRIT +100%, CRIT DMG +20%, HIT +80, Paralysis RES +80%, HP Regen +600,000","atk":416152,"def":365930,"hp":39837753,"rewards":"30 Dragon Orbs, Gear: Transformer"},{"no":13,"boss":"Behemoth","requirements":"900 Controllers","check":287750,"special":"CRIT +100%, CRIT DMG +20%, HIT +80, Paralysis RES +80%, HP Regen +800,000","atk":459489,"def":402500,"hp":50779644,"rewards":"12k Ancient coins, Special Robot: Godzilla"},{"no":14,"boss":"Death Star","requirements":"6k Organ Slimes","check":291725,"special":"CRIT +100%, HIT +80, Lifesteal +100%, Lifesteal Effect +300%, Paralysis RES +80%, Ignore DEF +10%","atk":499229,"def":442798,"hp":57551939,"rewards":"Home Decoration: Cart, 50k Organ Slimes"},{"no":15,"boss":"Ksitigarbha","requirements":"60 Abyss Wings","check":299545,"special":"CRIT 100%, HIT +80, Paralysis RES +80%, Lifesteal +100%, Lifesteal Effect +300%","atk":601839,"def":488864,"hp":61581659,"rewards":"Home Decoration: Netherworld Lantern, 3k Glues"},{"no":16,"boss":"Mysterious Earth Star","requirements":"600 Controllers","check":310920,"special":"CRIT 100%, CRIT DMG +30%, Lifesteal +100%, Lifesteal Effect +300%, HIT +80, Paralysis RES +80%, Paralysis +10%","atk":627118,"def":533652,"hp":74542925,"rewards":"12k Ancient coins, Home Decoration: Yellow Incense Burner"},{"no":17,"boss":"Jet Star","requirements":"6k Organ Slimes","check":322295,"special":"CRIT 100%, CRIT DMG +30%, HIT +80, Lifesteal +100%, Lifesteal Effect +300%, Paralysis RES +80%","atk":679807,"def":577223,"hp":83453706,"rewards":"3k Organ slimes, Home Decoration: Flag/Banner"}];
+
+async function load() {
+  try {
+    const r = await fetch("bandaid.json", { cache: "no-store" });
+    if (r.ok) { const d = await r.json(); if (Array.isArray(d) && d.length) return d; }
+  } catch (e) { /* use the built-in list */ }
+  return SEED;
+}
+
+const fmt = (n) => n.toLocaleString("en-US");
+const el = (tag, text, cls) => { const e = document.createElement(tag); if (text != null) e.textContent = text; if (cls) e.className = cls; return e; };
+
+load().then((rows) => {
+  const tbody = document.getElementById("rows");
+  for (const r of rows) {
+    const tr = el("tr"), first = el("td");
+    first.append(el("div", r.no + ". " + r.boss, "name"), el("div", r.requirements, "req"));
+    tr.append(first, el("td", fmt(r.check), "n"), el("td", r.rewards));
+    tbody.appendChild(tr);
+  }
+});
+</script>
+</body>
+</html>
