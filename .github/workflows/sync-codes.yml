@@ -1,0 +1,25 @@
+name: Sync codes
+on:
+  schedule:
+    - cron: "0 */2 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node sync.js
+        env:
+          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+          CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
+      - name: Commit if changed
+        run: |
+          git config user.name "codes-bot"
+          git config user.email "codes-bot@users.noreply.github.com"
+          git add codes.json
+          git diff --cached --quiet || (git commit -m "Update codes" && git push)
