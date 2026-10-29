@@ -1,14 +1,44 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#0c1010"><title>Under the Bandaid · Super Snail Field Guide</title><link rel="stylesheet" href="style.css"></head><body>
-<header class="mast"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">✳</span><span>SUPER SNAIL <span style="color:var(--lime)">/ FIELD GUIDE</span></span></a><nav><a href="index.html" >Home</a><a href="codes.html">Codes</a><a href="dragon.html" >Divine Dragon</a><a href="bandaid.html" aria-current="page">Under the Bandaid</a></nav></header>
-<main><section class="page-head"><span class="eyebrow">Boss reference</span><h1>Under the Bandaid</h1><p class="lede">Bosses in order, with unlock requirements, rush checks, combat stats, and rewards.</p></section>
-<div class="stat-row"><div class="stat"><strong id="boss-count">—</strong><span>Bosses listed</span></div><div class="stat"><strong id="top-check">—</strong><span>Highest rush check</span></div><div class="stat"><strong>Searchable</strong><span>Requirements & rewards</span></div></div>
-<div class="toolbar"><label class="search"><input id="search" type="search" placeholder="Search boss, requirement, reward…" aria-label="Search bosses"></label><span class="result-count" id="result-count" aria-live="polite"></span></div><p class="mobile-hint">Tip: swipe the table sideways to see all columns.</p>
-<div class="tablewrap"><table><thead><tr><th>Boss / requirements</th><th>Rush check</th><th>Combat stats</th><th>Rewards</th></tr></thead><tbody id="rows"></tbody></table><div class="empty" id="empty" hidden>No bosses match that search.</div></div>
-<p class="note">Unofficial, fan-made list. Confirm values in-game; requirements and stats may change.</p><footer class="site-footer"><span><strong>SUPER SNAIL / FIELD GUIDE</strong> · Unofficial fan project</span><span>Made by players, for players.</span></footer></main>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Under the Bandaid</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header class="mast"><a class="brand" href="index.html"><svg class="shell" viewBox="0 0 48 48" aria-hidden="true"><path d="M22.5 24.0 L22.3 23.7 L22.2 23.4 L22.1 23.1 L22.2 22.7 L22.3 22.3 L22.4 21.8 L22.7 21.5 L23.1 21.1 L23.5 20.8 L24.0 20.6 L24.6 20.4 L25.2 20.4 L25.8 20.4 L26.5 20.6 L27.1 20.9 L27.7 21.3 L28.3 21.8 L28.8 22.5 L29.1 23.2 L29.4 24.0 L29.5 24.9 L29.5 25.8 L29.3 26.7 L29.0 27.6 L28.5 28.5 L27.9 29.3 L27.1 30.0 L26.1 30.6 L25.1 31.1 L24.0 31.3 L22.8 31.4 L21.6 31.3 L20.4 31.1 L19.2 30.6 L18.1 29.9 L17.1 29.0 L16.3 27.9 L15.5 26.7 L15.0 25.4 L14.7 24.0 L14.6 22.5 L14.8 21.0 L15.2 19.5 L15.9 18.1 L16.8 16.8 L17.9 15.6 L19.2 14.5 L20.7 13.7 L22.3 13.1 L24.0 12.8 L25.8 12.7 L27.6 13.0 L29.4 13.5 L31.1 14.3 L32.6 15.4 L34.0 16.7 L35.2 18.3 L36.2 20.1 L36.8 22.0 L37.2 24.0 L37.2 26.1 L36.9 28.2 L36.3 30.2 L35.3 32.2 L34.0 34.0 L32.4 35.6 L30.6 36.9 L28.5 38.0 L26.3 38.7 L24.0 39.1 L21.6 39.1 L19.2 38.7 L16.9 38.0 L14.7 36.9 L12.6 35.4 L10.8 33.6 L9.3 31.5 L8.1 29.2 L7.3 26.6 L6.9 24.0 L7.0 21.3 L7.4 18.6 L8.3 16.0 L9.6 13.5 L11.3 11.3 L13.3 9.3 L15.6 7.6 L18.2 6.3 L21.1 5.4 L24.0 5.0" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Super Snail</span></a><nav><a href="index.html">Codes</a><a href="dragon.html">Ultimate Divine Dragon</a><a href="bandaid.html" aria-current="page">Under the Bandaid</a></nav></header>
+  <h1>Under the Bandaid</h1>
+  <p class="lede">Each boss in order, with its requirements, rewards, and rush check.</p>
+  <div class="tablewrap"><table><thead><tr><th>Boss</th><th>Rush check</th><th>Rewards</th></tr></thead><tbody id="rows"></tbody></table></div>
+  <p class="note">Unofficial, fan-made list.</p>
+</main>
 <script>
+// Fallback data; mirrors bandaid.json. When bandaid.json sits next to this page it is loaded instead.
 const SEED = [{"no":1,"boss":"Demon Dragon","requirements":"Summon the Divine Dragon 50 times and submit 20 Dragon Orbs","check":119350,"special":"HIT +80, Paralysis RES +80%","atk":136764,"def":98210,"hp":2183948,"rewards":"Gear: Broken Demon Dragon Horn"},{"no":2,"boss":"Magic Mboard","requirements":"300 Controllers","check":129030,"special":"HIT +80, Paralysis RES +80%","atk":154924,"def":111251,"hp":2633241,"rewards":"Special Robot: Demonized Mboard"},{"no":3,"boss":"Heart of Gaia","requirements":"Beat the Manhunt: Earth Will Cancer LVL 2 and 3k Organ Slimes","check":139250,"special":"CRIT 100%, CRIT DMG 40%, HIT +80, Paralysis RES +80%, HP Regen +100k","atk":162743,"def":125580,"hp":2085104,"rewards":"Heart of Gaia"},{"no":4,"boss":"Peter","requirements":"100 B-tads","check":150150,"special":"Evasion rate +40%, HIT +80, Paralysis RES +80%","atk":191024,"def":141680,"hp":3411694,"rewards":"Green Relic: Gold Medal Producer"},{"no":5,"boss":"Demonized Excalibur","requirements":"30M Power and 30 Heaven Wings","check":162000,"special":"CRIT 100%, CRIT DMG 40%, HIT +80, Paralysis RES +80%","atk":200000,"def":160000,"hp":4700000,"rewards":"Gear: Fractured Caladbolg"},{"no":6,"boss":"Ba’al","requirements":"5k Fissure level and 30 Abyss Wings","check":174900,"special":"CRIT 100%, CRIT DMG 30%, HIT +80, Paralysis RES +80%, Lifesteal +100%","atk":215137,"def":176295,"hp":5290933,"rewards":"Gear: Fire of Fury"},{"no":7,"boss":"Agares","requirements":"40 Dragon Orbs","check":191920,"special":"CRIT 100%, CRIT DMG +30%, HIT +80, Paralysis RES +80%, Lifesteal +100%, Lifesteal Effect +1500%","atk":237270,"def":224848,"hp":7603979,"rewards":"1k Magic Potions"},{"no":8,"boss":"Baimon","requirements":"600 Controllers","check":210785,"special":"CRIT 100%, CRIT DMG +30%, HIT +80, Paralysis RES +80%, Lifesteal +100%, Lifesteal Effect +2000%","atk":268094,"def":224848,"hp":9926361,"rewards":"Blasphemy Eye"},{"no":9,"boss":"Asmodeus","requirements":"6k Organ Slimes","check":229630,"special":"CRIT 100%, CRIT DMG +30%, HIT +80, Paralysis RES +80%, Lifesteal +100%, Lifesteal Effect +2500%","atk":294178,"def":251942,"hp":14312564,"rewards":"6k Organ Slimes, Demon Crystal"},{"no":10,"boss":"Astaru","requirements":"60 Heaven Wings","check":2482480,"special":"CRIT 100%, CRIT DMG +30%, Paralysis RES +80, Lifesteal +100%, HIT +80, Lifesteal Effect +3000%","atk":323220,"def":282118,"hp":20832438,"rewards":"3k Glues, Green Relic: Demon King"},{"no":11,"boss":"Ultimate Weapon","requirements":"150 Object Shoots, 60 Abyss Wings","check":262600,"special":"CRIT 100%, CRIT DMG +20%, HIT +80, Paralysis RES +80%, HP Regen +300,000","atk":377516,"def":332580,"hp":33209043,"rewards":"3k Glues, Mecha minions orange skin frags"},{"no":12,"boss":"Light Giant","requirements":"60 Dragon Orbs","check":275145,"special":"CRIT +100%, CRIT DMG +20%, HIT +80, Paralysis RES +80%, HP Regen +600,000","atk":416152,"def":365930,"hp":39837753,"rewards":"30 Dragon Orbs, Gear: Transformer"},{"no":13,"boss":"Behemoth","requirements":"900 Controllers","check":287750,"special":"CRIT +100%, CRIT DMG +20%, HIT +80, Paralysis RES +80%, HP Regen +800,000","atk":459489,"def":402500,"hp":50779644,"rewards":"12k Ancient coins, Special Robot: Godzilla"},{"no":14,"boss":"Death Star","requirements":"6k Organ Slimes","check":291725,"special":"CRIT +100%, HIT +80, Lifesteal +100%, Lifesteal Effect +300%, Paralysis RES +80%, Ignore DEF +10%","atk":499229,"def":442798,"hp":57551939,"rewards":"Home Decoration: Cart, 50k Organ Slimes"},{"no":15,"boss":"Ksitigarbha","requirements":"60 Abyss Wings","check":299545,"special":"CRIT 100%, HIT +80, Paralysis RES +80%, Lifesteal +100%, Lifesteal Effect +300%","atk":601839,"def":488864,"hp":61581659,"rewards":"Home Decoration: Netherworld Lantern, 3k Glues"},{"no":16,"boss":"Mysterious Earth Star","requirements":"600 Controllers","check":310920,"special":"CRIT 100%, CRIT DMG +30%, Lifesteal +100%, Lifesteal Effect +300%, HIT +80, Paralysis RES +80%, Paralysis +10%","atk":627118,"def":533652,"hp":74542925,"rewards":"12k Ancient coins, Home Decoration: Yellow Incense Burner"},{"no":17,"boss":"Jet Star","requirements":"6k Organ Slimes","check":322295,"special":"CRIT 100%, CRIT DMG +30%, HIT +80, Lifesteal +100%, Lifesteal Effect +300%, Paralysis RES +80%","atk":679807,"def":577223,"hp":83453706,"rewards":"3k Organ slimes, Home Decoration: Flag/Banner"}];
-async function load(){try{const r=await fetch('bandaid.json',{cache:'no-store'});if(r.ok){const d=await r.json();if(Array.isArray(d)&&d.length)return d;}}catch(e){}return SEED;}
-const fmt=n=>Number(n).toLocaleString('en-US');
-const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-load().then(data=>{const input=document.getElementById('search'),tbody=document.getElementById('rows');document.getElementById('boss-count').textContent=data.length;document.getElementById('top-check').textContent=fmt(Math.max(...data.map(x=>x.check||0)));function render(){const q=input.value.trim().toLowerCase();const filtered=data.filter(x=>[x.no,x.boss,x.requirements,x.rewards,x.special,x.check,x.atk,x.def,x.hp].join(' ').toLowerCase().includes(q));tbody.innerHTML=filtered.map(x=>`<tr><td><div class="name">${x.no}. ${esc(x.boss)}</div><div class="req">${esc(x.requirements)}</div></td><td><span class="pill">${fmt(x.check)}</span></td><td><div class="boss-stats"><span>ATK ${fmt(x.atk)}</span><span>DEF ${fmt(x.def)}</span><span>HP ${fmt(x.hp)}</span></div><div class="req">${esc(x.special)}</div></td><td class="reward">${esc(x.rewards)}</td></tr>`).join('');document.getElementById('result-count').textContent=`${filtered.length} of ${data.length} bosses`;document.getElementById('empty').hidden=filtered.length>0;}input.addEventListener('input',render);render();});
-</script></body></html>
+
+async function load() {
+  try {
+    const r = await fetch("bandaid.json", { cache: "no-store" });
+    if (r.ok) { const d = await r.json(); if (Array.isArray(d) && d.length) return d; }
+  } catch (e) { /* use the built-in list */ }
+  return SEED;
+}
+
+const fmt = (n) => n.toLocaleString("en-US");
+const el = (tag, text, cls) => { const e = document.createElement(tag); if (text != null) e.textContent = text; if (cls) e.className = cls; return e; };
+
+load().then((rows) => {
+  const tbody = document.getElementById("rows");
+  for (const r of rows) {
+    const tr = el("tr"), first = el("td");
+    first.append(el("div", r.no + ". " + r.boss, "name"), el("div", r.requirements, "req"));
+    tr.append(first, el("td", fmt(r.check), "n"), el("td", r.rewards));
+    tbody.appendChild(tr);
+  }
+});
+</script>
+</body>
+</html>
