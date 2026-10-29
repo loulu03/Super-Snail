@@ -21,23 +21,12 @@ a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 h1{font-size:clamp(2rem,7vw,3.25rem);line-height:1.05;letter-spacing:-.03em;font-weight:800;margin:0 0 .75rem}
 h2{font-size:1.3rem;font-weight:600;margin:0 0 .6rem;letter-spacing:-.01em}
 .lede{color:var(--muted);margin:0 0 2rem;max-width:34rem}
-.tool{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem}
-label{display:flex;flex-direction:column;gap:.3rem;font-weight:600;font-size:.95rem}
-input{font:inherit;width:10rem;padding:.55rem .7rem;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:6px}
-input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-.next-line{font-size:1.15rem;font-weight:600;margin:0 0 1.75rem}
-.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1.75rem;margin-bottom:2.5rem}
-.sum ul{list-style:none;margin:0;padding:0}
-.sum li{display:flex;justify-content:space-between;gap:1rem;padding:.4rem 0;border-bottom:1px solid var(--line)}
-.sum li span:last-child{font-variant-numeric:tabular-nums;font-weight:600}
 .shared{color:var(--muted);margin:0 0 .75rem}
 .tablewrap{overflow-x:auto}
 table{width:100%;border-collapse:collapse}
 th,td{text-align:left;padding:.55rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
 th{border-bottom:2px solid var(--ink)}
 td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
-tr.earned td{color:var(--muted)}
-tr.next td{background:var(--flash);color:var(--flash-ink);font-weight:600}
 .note{color:var(--muted);font-size:.9rem;margin-top:3rem}
 </style>
 </head>
@@ -45,17 +34,7 @@ tr.next td{background:var(--flash);color:var(--flash-ink);font-weight:600}
 <main>
   <nav><a href="index.html">Codes</a><a href="dragon.html" aria-current="page">Ultimate Divine Dragon</a></nav>
   <h1>Ultimate Divine Dragon rewards</h1>
-  <p class="lede">Enter the dragon orbs you’ve used to see what you’ve earned so far and what comes next.</p>
-  <div class="tool">
-    <label>Dragon orbs used<input id="used" type="number" min="0" step="1" inputmode="numeric" placeholder="0"></label>
-    <label>Goal (optional)<input id="goal" type="number" min="0" step="1" inputmode="numeric" placeholder="e.g. 500"></label>
-  </div>
-  <p class="next-line" id="next" aria-live="polite"></p>
-  <div class="cols">
-    <div class="sum"><h2>Earned so far</h2><ul id="earned"></ul></div>
-    <div class="sum" id="goalbox" hidden><h2 id="goalh"></h2><ul id="togo"></ul></div>
-  </div>
-  <h2>All milestones</h2>
+  <p class="lede">Rewards for the number of dragon orbs you’ve used.</p>
   <p class="shared" id="shared"></p>
   <div class="tablewrap"><table><thead><tr><th>Orbs used</th><th>Reward</th></tr></thead><tbody id="rows"></tbody></table></div>
   <p class="note">Unofficial, fan-made list.</p>
@@ -72,63 +51,25 @@ async function load() {
   return SEED;
 }
 
-const $ = (id) => document.getElementById(id);
 const fmt = (n) => n.toLocaleString("en-US");
 const same = (a, b) => a.item === b.item && a.qty === b.qty;
 
-function run(rows) {
+load().then((rows) => {
   // Rewards identical on every row are shown once, not repeated in each row.
   const shared = rows[0].rewards.slice(1).filter((f, i) => rows.every((r) => r.rewards[i + 1] && same(r.rewards[i + 1], f)));
-  const own = (r) => r.rewards.filter((x) => !shared.some((s) => same(s, x)));
-  const text = (r) => own(r).map((x) => x.item + " ×" + fmt(x.qty)).join(" + ");
-  $("shared").textContent = shared.length ? "Every milestone also gives: " + shared.map((x) => x.item + " ×" + fmt(x.qty)).join(", ") + "." : "";
-
-  const tbody = $("rows");
+  document.getElementById("shared").textContent = shared.length
+    ? "Every milestone also gives: " + shared.map((x) => x.item + " ×" + fmt(x.qty)).join(", ") + "." : "";
+  const tbody = document.getElementById("rows");
   for (const r of rows) {
-    const tr = document.createElement("tr"); tr.dataset.orbs = r.orbs;
+    const tr = document.createElement("tr");
     const a = document.createElement("td"); a.className = "n"; a.textContent = fmt(r.orbs);
     const b = document.createElement("td");
-    for (const x of own(r)) { const d = document.createElement("div"); d.textContent = x.item + " ×" + fmt(x.qty); b.appendChild(d); }
+    for (const x of r.rewards.filter((x) => !shared.some((s) => same(s, x)))) {
+      const d = document.createElement("div"); d.textContent = x.item + " ×" + fmt(x.qty); b.appendChild(d);
+    }
     tr.append(a, b); tbody.appendChild(tr);
   }
-
-  const totals = (list) => {
-    const m = new Map();
-    for (const r of list) for (const x of r.rewards) m.set(x.item, (m.get(x.item) || 0) + x.qty);
-    return [...m].sort((p, q) => p[0].localeCompare(q[0]));
-  };
-  const fill = (ul, list) => {
-    ul.textContent = "";
-    if (!list.length) { const li = document.createElement("li"); li.textContent = "Nothing yet"; ul.appendChild(li); return; }
-    for (const [item, qty] of list) {
-      const li = document.createElement("li"), a = document.createElement("span"), b = document.createElement("span");
-      a.textContent = item; b.textContent = "×" + fmt(qty); li.append(a, b); ul.appendChild(li);
-    }
-  };
-
-  function update() {
-    const used = Math.max(0, Math.floor(Number($("used").value) || 0));
-    const goal = Math.max(0, Math.floor(Number($("goal").value) || 0));
-    const next = rows.find((r) => r.orbs > used);
-    $("next").textContent = next ? "Next: " + text(next) + " at " + fmt(next.orbs) + " orbs (" + fmt(next.orbs - used) + " more)" : "You’ve reached every listed milestone.";
-    fill($("earned"), totals(rows.filter((r) => r.orbs <= used)));
-    const showGoal = goal > used;
-    $("goalbox").hidden = !showGoal;
-    if (showGoal) {
-      $("goalh").textContent = "Still to earn by " + fmt(goal) + " orbs (" + fmt(goal - used) + " more)";
-      fill($("togo"), totals(rows.filter((r) => r.orbs > used && r.orbs <= goal)));
-    }
-    for (const tr of tbody.children) {
-      const o = Number(tr.dataset.orbs);
-      tr.className = o <= used ? "earned" : next && o === next.orbs ? "next" : "";
-    }
-  }
-  $("used").addEventListener("input", update);
-  $("goal").addEventListener("input", update);
-  update();
-}
-
-load().then(run);
+});
 </script>
 </body>
 </html>
