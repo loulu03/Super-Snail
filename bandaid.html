@@ -5,14 +5,47 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Under the Bandaid</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap">
-<link rel="stylesheet" href="style.css">
+<style>
+:root{--bg:#eef2e6;--ink:#1a2a20;--muted:#55645a;--line:#c9d4bf;--card:#e3eada;--accent:#2d6a4f;--on-accent:#ffffff;--flash:#c9e46b;--flash-ink:#1a2a20;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101913;--ink:#e4eee1;--muted:#97a89b;--line:#2a3a2f;--card:#18241c;--accent:#7fcf9f;--on-accent:#0e1a12;--flash:#c9e46b;--flash-ink:#16210f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#101913;--ink:#e4eee1;--muted:#97a89b;--line:#2a3a2f;--card:#18241c;--accent:#7fcf9f;--on-accent:#0e1a12;--flash:#c9e46b;--flash-ink:#16210f;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
+main{max-width:48rem;margin:0 auto;padding:2rem 1.25rem 4rem}
+nav{display:flex;gap:1.25rem;flex-wrap:wrap;margin-bottom:2rem;font-weight:600}
+nav a{color:var(--ink);text-decoration:none;padding-bottom:.15rem;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--line)}
+nav a[aria-current]{border-color:var(--accent)}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+h1{font-size:clamp(2rem,7vw,3.25rem);line-height:1.05;letter-spacing:-.03em;font-weight:800;margin:0 0 .75rem}
+h2{font-size:1.3rem;font-weight:600;margin:0 0 .6rem;letter-spacing:-.01em}
+.lede{color:var(--muted);margin:0 0 2rem;max-width:34rem}
+.tool{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem}
+label{display:flex;flex-direction:column;gap:.3rem;font-weight:600;font-size:.95rem}
+input{font:inherit;width:10rem;padding:.55rem .7rem;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:6px}
+input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.next-line{font-size:1.15rem;font-weight:600;margin:0 0 1.75rem}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1.75rem;margin-bottom:2.5rem}
+.sum ul{list-style:none;margin:0;padding:0}
+.sum li{display:flex;justify-content:space-between;gap:1rem;padding:.4rem 0;border-bottom:1px solid var(--line)}
+.sum li span:last-child{font-variant-numeric:tabular-nums;font-weight:600}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+th,td{text-align:left;padding:.5rem .55rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{border-bottom:2px solid var(--ink);font-weight:600}
+td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+.name{font-weight:800}
+.req{color:var(--muted);font-size:.88rem}
+@media (max-width:30rem){table{font-size:.85rem}th,td{padding:.45rem .3rem}}
+.note{color:var(--muted);font-size:.9rem;margin-top:3rem}
+</style>
 </head>
 <body>
 <main>
-  <header class="mast"><a class="brand" href="index.html"><svg class="shell" viewBox="0 0 48 48" aria-hidden="true"><path d="M22.5 24.0 L22.3 23.7 L22.2 23.4 L22.1 23.1 L22.2 22.7 L22.3 22.3 L22.4 21.8 L22.7 21.5 L23.1 21.1 L23.5 20.8 L24.0 20.6 L24.6 20.4 L25.2 20.4 L25.8 20.4 L26.5 20.6 L27.1 20.9 L27.7 21.3 L28.3 21.8 L28.8 22.5 L29.1 23.2 L29.4 24.0 L29.5 24.9 L29.5 25.8 L29.3 26.7 L29.0 27.6 L28.5 28.5 L27.9 29.3 L27.1 30.0 L26.1 30.6 L25.1 31.1 L24.0 31.3 L22.8 31.4 L21.6 31.3 L20.4 31.1 L19.2 30.6 L18.1 29.9 L17.1 29.0 L16.3 27.9 L15.5 26.7 L15.0 25.4 L14.7 24.0 L14.6 22.5 L14.8 21.0 L15.2 19.5 L15.9 18.1 L16.8 16.8 L17.9 15.6 L19.2 14.5 L20.7 13.7 L22.3 13.1 L24.0 12.8 L25.8 12.7 L27.6 13.0 L29.4 13.5 L31.1 14.3 L32.6 15.4 L34.0 16.7 L35.2 18.3 L36.2 20.1 L36.8 22.0 L37.2 24.0 L37.2 26.1 L36.9 28.2 L36.3 30.2 L35.3 32.2 L34.0 34.0 L32.4 35.6 L30.6 36.9 L28.5 38.0 L26.3 38.7 L24.0 39.1 L21.6 39.1 L19.2 38.7 L16.9 38.0 L14.7 36.9 L12.6 35.4 L10.8 33.6 L9.3 31.5 L8.1 29.2 L7.3 26.6 L6.9 24.0 L7.0 21.3 L7.4 18.6 L8.3 16.0 L9.6 13.5 L11.3 11.3 L13.3 9.3 L15.6 7.6 L18.2 6.3 L21.1 5.4 L24.0 5.0" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Super Snail</span></a><nav><a href="index.html">Codes</a><a href="dragon.html">Ultimate Divine Dragon</a><a href="bandaid.html" aria-current="page">Under the Bandaid</a></nav></header>
+  <nav><a href="index.html">Codes</a><a href="dragon.html">Ultimate Divine Dragon</a><a href="bandaid.html" aria-current="page">Under the Bandaid</a></nav>
   <h1>Under the Bandaid</h1>
   <p class="lede">Each boss in order, with its requirements, rewards, and rush check.</p>
-  <div class="tablewrap"><table><thead><tr><th>Boss</th><th>Rush check</th><th>Rewards</th></tr></thead><tbody id="rows"></tbody></table></div>
+  <table><thead><tr><th>Boss</th><th>Rush check</th><th>Rewards</th></tr></thead><tbody id="rows"></tbody></table>
   <p class="note">Unofficial, fan-made list.</p>
 </main>
 <script>
