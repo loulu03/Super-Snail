@@ -1,6 +1,0 @@
-{
-  "name": "snail-codes-sync",
-  "private": true,
-  "type": "module",
-  "scripts": { "test": "node --test", "sync": "node sync.js" }
-}
