@@ -1,0 +1,992 @@
+[
+ {
+  "orbs": 70,
+  "rewards": [
+   {
+    "item": "Dragon Tribe Map Fragments",
+    "qty": 40
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 90,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 110,
+  "rewards": [
+   {
+    "item": "Golden Dragon Horn Snail Shell",
+    "qty": 1
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want a strong snail shell!"
+ },
+ {
+  "orbs": 130,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 150,
+  "rewards": [
+   {
+    "item": "Bubble Dragon Capsule Robot",
+    "qty": 1
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want a rocket robot!"
+ },
+ {
+  "orbs": 170,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 190,
+  "rewards": [
+   {
+    "item": "Ultimate Dragon Badge",
+    "qty": 1
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I will worship you morning and night!"
+ },
+ {
+  "orbs": 210,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 230,
+  "rewards": [
+   {
+    "item": "Ancient Brilliant Dragon Crystal Relic Frags",
+    "qty": 40
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want your collection!"
+ },
+ {
+  "orbs": 250,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 270,
+  "rewards": [
+   {
+    "item": "Ancient Brilliant Dragon Crystal Relic Frags",
+    "qty": 40
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want your collection!"
+ },
+ {
+  "orbs": 290,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 310,
+  "rewards": [
+   {
+    "item": "Ancient Brilliant Dragon Crystal Relic Frags",
+    "qty": 40
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want your collection!"
+ },
+ {
+  "orbs": 330,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 350,
+  "rewards": [
+   {
+    "item": "Ancient Brilliant Dragon Crystal Relic Frags",
+    "qty": 40
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want your collection!"
+ },
+ {
+  "orbs": 370,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 10
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 390,
+  "rewards": [
+   {
+    "item": "Ancient Brilliant Dragon Crystal Relic Frags",
+    "qty": 40
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want your collection!"
+ },
+ {
+  "orbs": 410,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 10
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 430,
+  "rewards": [
+   {
+    "item": "Ancient Brilliant Dragon Crystal Relic Frags",
+    "qty": 40
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want your collection!"
+ },
+ {
+  "orbs": 450,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 10
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 470,
+  "rewards": [
+   {
+    "item": "Ancient Brilliant Dragon Crystal Relic Frags",
+    "qty": 40
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want your collection!"
+ },
+ {
+  "orbs": 490,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 10
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 510,
+  "rewards": [
+   {
+    "item": "Demon Crystal",
+    "qty": 1
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want your collection!"
+ },
+ {
+  "orbs": 530,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 10
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 550,
+  "rewards": [
+   {
+    "item": "Dragon Minion Skin “Jialong”",
+    "qty": 1
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to enhance the dragon painting!"
+ },
+ {
+  "orbs": 570,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 10
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 590,
+  "rewards": [
+   {
+    "item": "Altar Skin “Carven Dragon Painted Pillar”",
+    "qty": 1
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want the altar to be more beautiful!"
+ },
+ {
+  "orbs": 610,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 630,
+  "rewards": [
+   {
+    "item": "Dragon Spine Medal Fragments",
+    "qty": 40
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want your collection!"
+ },
+ {
+  "orbs": 650,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 670,
+  "rewards": [
+   {
+    "item": "Dragon Spine Medal Fragments",
+    "qty": 40
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want your collection!"
+ },
+ {
+  "orbs": 690,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 710,
+  "rewards": [
+   {
+    "item": "Dragon Spine Medal Fragments",
+    "qty": 40
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want your collection!"
+ },
+ {
+  "orbs": 730,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 750,
+  "rewards": [
+   {
+    "item": "Dragon Spine Medal Fragments",
+    "qty": 40
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want your collection!"
+ },
+ {
+  "orbs": 770,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 790,
+  "rewards": [
+   {
+    "item": "Dragon Spine Medal Fragments",
+    "qty": 40
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want your collection!"
+ },
+ {
+  "orbs": 810,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 830,
+  "rewards": [
+   {
+    "item": "Dragon Spine Medal Fragments",
+    "qty": 40
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want your collection!"
+ },
+ {
+  "orbs": 850,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 870,
+  "rewards": [
+   {
+    "item": "Dragon Spine Medal Fragments",
+    "qty": 40
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want your collection!"
+ },
+ {
+  "orbs": 890,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 10
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 910,
+  "rewards": [
+   {
+    "item": "Dragon Head Portrait Frame",
+    "qty": 1
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as noble as you!"
+ },
+ {
+  "orbs": 930,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 10
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 950,
+  "rewards": [
+   {
+    "item": "Orange Snail Shell/Wings",
+    "qty": 1
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want cool snail shells/wings!"
+ },
+ {
+  "orbs": 970,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 10
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 990,
+  "rewards": [
+   {
+    "item": "Dragon Chat Emoticon Pack",
+    "qty": 1
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be a social expert!"
+ },
+ {
+  "orbs": 1010,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 10
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 1030,
+  "rewards": [
+   {
+    "item": "Dragon Fragments for Drill Record",
+    "qty": 80
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to challenge you!"
+ },
+ {
+  "orbs": 1050,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 10
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 1070,
+  "rewards": [
+   {
+    "item": "Dragon Fragments for Drill Record",
+    "qty": 80
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to challenge you!"
+ },
+ {
+  "orbs": 1090,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 10
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 1110,
+  "rewards": [
+   {
+    "item": "Dragon Fragments for Drill Record",
+    "qty": 120
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to challenge you!"
+ },
+ {
+  "orbs": 1130,
+  "rewards": [
+   {
+    "item": "Purple Divine Dragon Sequence",
+    "qty": 10
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to be as strong as you!"
+ },
+ {
+  "orbs": 1150,
+  "rewards": [
+   {
+    "item": "Dragon Partner #6",
+    "qty": 1
+   },
+   {
+    "item": "Blue Divine Dragon Sequence",
+    "qty": 5
+   },
+   {
+    "item": "Dragon Chest",
+    "qty": 300
+   }
+  ],
+  "option": "I want to meet new partners!"
+ }
+]
